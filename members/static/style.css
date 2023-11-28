@@ -1,0 +1,42 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+.member_details {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 20px;
+    cursor: pointer;    
+    color: black;
+}
+
+.member_details:hover {
+    background-color: azure;
+}
+
+.avatar {
+    width: 100px; 
+    height: 100px; 
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.member-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-input {
+    margin-bottom: 20px;
+}

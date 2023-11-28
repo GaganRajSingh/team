@@ -1,0 +1,36 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+
+<div class="container">
+	<h1>Edit team member</h1>
+	<p>Edit contact info, location, and role.</p>
+
+	<form method="post" action="">
+		{% csrf_token %}
+		<h3>Info</h3>
+		<input type="text" name="first_name" value="{{ form.first_name.value }}" placeholder="First Name" class="member-input" required>
+
+		<input type="text" name="last_name" value="{{ form.last_name.value }}" placeholder="Last Name" class="member-input" required>    
+		
+		<input type="email" name="email" value="{{ form.email.value }}" placeholder="Email" class="member-input" required>
+				
+		<input type="tel" name="phone_number" value="{{ form.phone_number.value }}" placeholder="Phone Number" class="member-input" required>
+
+		<h3>Role</h3>
+		<div class="radio-group">
+			<label>
+				<input type="radio" name="is_admin" value="False" class="radio-input" {% if not form.is_admin.value  %}checked{% endif %}> Regular - Can't delete members
+			</label>
+			<label>
+			  	<input type="radio" name="is_admin" value="True" class="radio-input" {% if form.is_admin.value  %}checked{% endif %}> Admin - Can delete members
+			</label>
+		</div>
+
+		<button type="submit" class="submit-button">Save</button>		
+
+	</form>
+	<form method="post" action="{% url 'team-delete' pk=object.pk %}">
+		{% csrf_token %}
+		<button type="submit">Delete</button>
+	</form>
+</div>

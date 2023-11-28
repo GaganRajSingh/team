@@ -1,0 +1,23 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+
+<div class="container">
+	<h1 style="text-align: right;">
+		<a href="{% url 'team-add' %}">+</a>
+	</h1>
+	<h1>Team Members</h1>
+
+	<p>You have {{ object_list|length }} team members</p>
+	{% for member in object_list %}
+		<a href="{% url 'team-update' pk=member.pk %}">
+			<div class="member_details">
+				<img src="{% static 'image.avif' %}" class="avatar">					
+				<div>
+					<p><strong>{{ member }}</strong> {% if member.is_admin %}(admin){% endif %}</p>
+					<p>{{ member.phone_number }}</p>
+					<p>{{ member.email }}</p>
+				</div>
+			</div>
+		</a>		
+	{% endfor %}
+</div>
