@@ -17,13 +17,13 @@ Follow these steps to set up and run the project locally.
 2. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/GaganRajSingh/Team-member.git
+    git clone https://github.com/GaganRajSingh/team.git
     ```
 
 3. **Navigate Inside the Folder:**
 
     ```bash
-    cd Team-member
+    cd team
     ```
 
 4. **Create a Virtual Environment:**
