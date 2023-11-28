@@ -54,13 +54,8 @@ Follow these steps to set up and run the project locally.
 
 ### Running the Server
 
-7. **Run Migrations:**
-    
-    ```bash
-    python3 manage.py migrate
-    ```
 
-8. **Run the Server:**
+7. **Run the Server:**
 
     ```bash
     python3 manage.py runserver
@@ -70,7 +65,7 @@ Follow these steps to set up and run the project locally.
 
 ### Deactivate the Virtual Environment
 
-9. **Deactivate the Virtual Environment:**
+8. **Deactivate the Virtual Environment:**
 
     ```bash
     deactivate
